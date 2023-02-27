@@ -1,0 +1,17 @@
+---
+- name: Playbook to deploy artifact
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Download artifact for nexus
+    ansible.builtin.get_url:
+      url: http://65.1.181.33:8081/repository/java-maven-app-releases/com%2Fmycompany%2Fapp%2Fhello-world-war%2F1.0.0-31%2Fhello-world-war-1.0.0-31.war
+      dest: /home/ec2-user/tomcat
+      mode: '0777'
+  
+  - name: Rename war file
+    ansible.builtin.shell: mv com%2Fmycompany%2Fapp%2Fhello-world-war%2F1.0.0-31%2Fhello-world-war-1.0.0-31.war hello-world-war-1.0.0-31.war
+
+  - name: Deploying artifact in webapps
+    ansible.builtin.shell: cp hello-world-war-1.0.0-31.war /apache-tomcat-9.0.72/webapps/

@@ -8,14 +8,14 @@ pipeline{
     stages{
         stage('SCM Checkout'){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Git_Token', url: 'https://github.com/jabedhasan21/java-hello-world-with-maven.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'Git_Token', url: 'https://github.com/getyourdurga/java-maven-war-app.git']])
             }
             
         }
 
         stage('maven-build'){
             steps{
-                sh 'mvn clean install -Dv=${BUILD_NUMBER}'
+                sh 'mvn clean install'
             }
         }
 

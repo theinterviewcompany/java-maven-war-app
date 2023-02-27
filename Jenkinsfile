@@ -33,7 +33,7 @@ pipeline{
 
         stage('nexus-upload'){
             steps{
-                sh 'mvn -s settings.xml clean deploy -Dv=${BUILD_NUMBER} -DuniqueVersion=false'
+                sh 'mvn -s settings.xml clean deploy'
             }
         }
 

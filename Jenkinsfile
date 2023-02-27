@@ -15,7 +15,7 @@ pipeline{
 
         stage('maven-build'){
             steps{
-                sh 'mvn clean install'
+                sh 'mvn clean install -Dv=${BUILD_NUMBER}'
             }
         }
 
@@ -33,7 +33,7 @@ pipeline{
 
         stage('nexus-upload'){
             steps{
-                sh 'mvn -s settings.xml clean deploy'
+                sh 'mvn -s settings.xml clean deploy -Dv=${BUILD_NUMBER} -DuniqueVersion=false'
             }
         }
 

@@ -15,7 +15,7 @@
       url: "{{nexus_url}}/{{repository_type}}/{{group_id}}/{{artifact_id}}/{{version}}.{{build_number}}/{{artifact_id}}-{{version}}.{{ build_number}}.war"
       dest: /usr/share/tomcat/webapps
       username: admin
-      password: afrin
+      password: admin
 
   - name: find the process
     ansible.builtin.shell: "ps -ef | awk '/tomcat/&&/java/&&!/awk/{print $2}'"

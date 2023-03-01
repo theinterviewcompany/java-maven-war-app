@@ -14,6 +14,8 @@
     ansible.builtin.get_url:
       url: "{{nexus_url}}/{{repository_type}}/{{group_id}}%2F{{artifact_id}}%2F{{version}}-{{build_number}}%2F{{artifact_id}}-{{version}}-{{ build_number}}.war"
       dest: /home/ec2-user/tomcat
+      username: admin
+      password: admin
 
   - name: Rename war file
     ansible.builtin.shell: mv /home/ec2-user/tomcat/{{group_id}}%2F{{artifact_id}}%2F{{version}}-{{build_number}}%2F{{artifact_id}}-{{version}}-{{ build_number}}.war /home/ec2-user/tomcat/{artifact_id}}-{{version}}-{{ build_number}}.war

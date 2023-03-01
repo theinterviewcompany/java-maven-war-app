@@ -18,10 +18,10 @@
       password: admin
 
   - name: Rename war file
-    ansible.builtin.shell: mv /home/ec2-user/tomcat/{{group_id}}%2F{{artifact_id}}%2F{{version}}-{{build_number}}%2F{{artifact_id}}-{{version}}-{{ build_number}}.war /home/ec2-user/tomcat/{artifact_id}}-{{version}}-{{ build_number}}.war
+    ansible.builtin.shell: mv /home/ec2-user/tomcat/{{group_id}}%2F{{artifact_id}}%2F{{version}}-{{build_number}}%2F{{artifact_id}}-{{version}}-{{ build_number}}.war /home/ec2-user/tomcat/{{artifact_id}}-{{version}}-{{ build_number}}.war
 
   - name: Deploying artifact in webapps
-    ansible.builtin.shell: cp /home/ec2-user/tomcat/{artifact_id}}-{{version}}-{{ build_number}}.war /home/ec2-user/tomcat/apache-tomcat-9.0.72/webapps/{artifact_id}}-{{version}}-{{ build_number}}.war
+    ansible.builtin.shell: cp /home/ec2-user/tomcat/{{artifact_id}}-{{version}}-{{ build_number}}.war /home/ec2-user/tomcat/apache-tomcat-9.0.72/webapps/{{artifact_id}}-{{version}}-{{ build_number}}.war
 
   - name: find the process
-    ansible.builtin.shell: "rm -rf cp /home/ec2-user/tomcat/{artifact_id}}-{{version}}-{{ build_number}}.war"
+    ansible.builtin.shell: "rm -rf cp /home/ec2-user/tomcat/{{artifact_id}}-{{version}}-{{ build_number}}.war"

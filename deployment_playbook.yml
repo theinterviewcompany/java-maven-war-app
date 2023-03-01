@@ -13,7 +13,6 @@
   - name: Download file from a file path
     ansible.builtin.get_url:
       url: "{{nexus_url}}/{{repository_type}}/{{group_id}}%2F{{artifact_id}}%2F{{version}}-{{build_number}}%2F{{artifact_id}}-{{version}}-{{ build_number}}.war"
-      http://65.0.54.66:8081/repository/java-maven-app-releases/com%2Fmycompany%2Fapp%2Fhello-world-war%2F1.0.0-32%2Fhello-world-war-1.0.0-32.war
       dest: /home/ec2-user/tomcat
 
   - name: Rename war file

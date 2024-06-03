@@ -12,7 +12,7 @@
     <server>
       <id>java-maven-war-app-release</id>
       <username>admin</username>
-      <password>Nisha@1011</password>
+      <password>admin</password>
     </server>
   </servers>
 

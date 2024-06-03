@@ -43,6 +43,6 @@
     </snapshotRepository>
     <repository>
       <id>java-maven-war-app-release</id>
-      <url>http://172.31.29.97:8081/repository/java-maven-war-app-release
+      <url>http://172.31.3.52:8081/repository/java-maven-war-app-release
   </distributionManagement>
 </project>

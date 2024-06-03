@@ -44,5 +44,6 @@
     <repository>
       <id>java-maven-war-app-release</id>
       <url>http://172.31.3.52:8081/repository/java-maven-war-app-release
+      </repository>
   </distributionManagement>
 </project>

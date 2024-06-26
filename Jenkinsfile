@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label 'master'
+        label 'agent'
     }
 
     tools {
@@ -40,9 +40,6 @@ pipeline{
         }
 
         stage('deployment'){
-            agent{
-                label 'agent'
-            }
             steps{
                 sh 'ansible-playbook -i inventory deployment_playbook.yml -e "build_number=${BUILD_NUMBER}"'
             }

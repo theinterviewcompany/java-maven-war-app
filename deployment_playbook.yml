@@ -8,7 +8,7 @@
     group_id: com%2Fmycompany%2Fapp
     artifact_id: hello-world-war
     version: 2.0.0
-    build_number: 35
+    build_number: "{{ build_number }}"
   tasks:
   - name: Download file from a file path
     ansible.builtin.get_url:

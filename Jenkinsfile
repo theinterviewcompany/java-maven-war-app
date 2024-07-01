@@ -28,7 +28,7 @@ pipeline {
 
         stage('Sonar Scan') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarqubeEnv('Sonarqube') {
                     sh """
                         ${tool('Sonar_5.0.1')}/bin/sonar-scanner \
                         -Dsonar.host.url=http://3.110.101.107:9000/ \

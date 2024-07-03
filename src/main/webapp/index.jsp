@@ -6,11 +6,11 @@
 <body>
 	<h1>Hello World!</h1>
 	<h1>DevOps Training - Apr 2024 Batch</h1>
-	<h1>This is automated deployment 2</h1>
+	<h1>This is automated deployment demo purpose </h1>
 	<h1>from playbook flow CI CD freestyle </h1>
-        <h1> the is created new project </h1>
-        <h1> This is created now  </h1>
-        <h1> This is training purpose </h1>
+        <h1> Github copilot camphion </h1>
+        <h1> This is created for training purpose  </h1>
+        <h1> If you're seeing this, you've successfully installed  </h1>
        
         
 	<p>

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mycompany.app</groupId>
 	<artifactId>hello-world-war</artifactId>
-	<version>2.0.0-${env.BUILD_NUMBER}</version>
+	<version>2.0.0</version>
 	<packaging>war</packaging>
 	<name>Hello World Web Application Repository</name>
 	<description>Simplest possible Java Webapp</description>
@@ -39,11 +39,11 @@
     <distributionManagement>
     <snapshotRepository>
       <id>java-maven-war-app-snapshot</id>
-      <url>http://172.31.14.196:8081/repository/java-maven-war-app-snapshot/</url>
+      <url>http://172.31.9.145:8081/repository/java-maven-war-app-snapshot/</url>
     </snapshotRepository>
     <repository>
       <id>java-maven-war-app-release</id>
-      <url>http://172.31.14.196:8081/repository/java-maven-war-app-release/</url>
+      <url>http://172.31.9.145:8081/repository/java-maven-war-app-release/</url>
     </repository>
   </distributionManagement>
 </project>

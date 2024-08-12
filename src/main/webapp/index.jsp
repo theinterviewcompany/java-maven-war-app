@@ -5,9 +5,7 @@
 </head>
 <body>
 	<h1>DevOps!!!1</h1>
-	<h1>Continuous Integration (CI): Developers frequently integrate their code into a shared repository!!.
-
-</h1>
+	<h1>Continuous Integration (CI): Developers frequently integrate their code into a shared repository!!.</h1>
 	<h1>Continuous Delivery (CD) </h1>
 	<h1>Automation: Key to DevOps is automating repetitive tasks like code testing, deployment, and infrastructure provisioning to increase efficiency and reduce human error. </h1>
         <h1> Monitoring and Logging:Tools like Prometheus, ELK stack, and Grafana are commonly used. </h1>

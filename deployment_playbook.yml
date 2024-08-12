@@ -3,12 +3,12 @@
   hosts: all
   become: true
   vars:
-    nexus_url: http://ec2-3-25-170-119.ap-southeast-2.compute.amazonaws.com:8081/repository
+    nexus_url: http://ec2-54-79-222-17.ap-southeast-2.compute.amazonaws.com:8081/repository 
     repository_type: java-maven-war-app-release
     group_id: com%2Fmycompany%2Fapp
     artifact_id: hello-world-war
     version: 2.0.0
-    build_number: "{{ build_number }}"
+    build_number: 28 
   tasks:
   - name: Download file from a file path
     ansible.builtin.get_url:
@@ -24,17 +24,16 @@
 
   - name: Debug war file stats
     ansible.builtin.debug:
-      var: war_file
+      var: war_file.stat.exists
 
   - name: Rename war file
     ansible.builtin.shell: mv /home/ec2-user/hello-world-war-{{ version }}-{{ build_number }}.war /home/ec2-user/nisha.war
     when: war_file.stat.exists
 
   - name: Deploying artifact in webapps
-    ansible.builtin.shell: cp /home/ec2-user/nisha.war /opt/apache-tomcat-9.0.90/webapps/nisha.war
+    ansible.builtin.shell: cp /home/ec2-user/nisha.war /opt/apache-tomcat-9.0.93/webapps/nisha.war
     when: war_file.stat.exists
 
-  - name: remove the artifact
+  - name: Remove the artifact
     ansible.builtin.shell: rm -rf /home/ec2-user/nisha.war
     when: war_file.stat.exists
-

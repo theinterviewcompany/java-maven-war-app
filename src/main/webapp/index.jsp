@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1>DevOps!!!1</h1>
-	<h1>Continuous Integration (CI): Developers frequently integrate their code into a shared repository. Each integration is automatically tested to catch bugs early.
+	<h1>Continuous Integration (CI): Developers frequently integrate their code into a shared repository!!.
 
 </h1>
 	<h1>Continuous Delivery (CD) </h1>

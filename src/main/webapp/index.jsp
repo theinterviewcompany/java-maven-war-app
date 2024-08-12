@@ -8,7 +8,7 @@
 	<h1>Continuous Integration (CI): Developers frequently integrate their code into a shared repository. Each integration is automatically tested to catch bugs early.
 
 </h1>
-	<h1>Continuous Delivery (CD): The code is always in a deployable state, enabling frequent, reliable releases. It extends CI by automatically deploying code changes to production </h1>
+	<h1>Continuous Delivery (CD) </h1>
 	<h1>Automation: Key to DevOps is automating repetitive tasks like code testing, deployment, and infrastructure provisioning to increase efficiency and reduce human error. </h1>
         <h1> Monitoring and Logging: Continuous monitoring of applications and infrastructure helps detect issues early and ensures systems are running efficiently. Tools like Prometheus, ELK stack, and Grafana are commonly used. </h1>
         <h1> Collaboration and Communication: DevOps encourages a collaborative culture where development, operations, and other stakeholders work together throughout the software development lifecycle (SDLC).  </h1>

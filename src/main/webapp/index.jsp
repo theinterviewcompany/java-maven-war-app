@@ -4,13 +4,16 @@
 
 </head>
 <body>
-	<h1>Hello World!</h1>
-	<h1>DevOps Training - Apr 2024 Batch</h1>
-	<h1>This is automated deployment demo purpose </h1>
-	<h1>from playbook flow CI CD freestyle </h1>
-        <h1> Github copilot camphion </h1>
-        <h1> This is created for training purpose  </h1>
-        <h1> If you're seeing this, you've successfully installed   the process</h1>
+	<h1>DevOps!!!1</h1>
+	<h1>Continuous Integration (CI): Developers frequently integrate their code into a shared repository. Each integration is automatically tested to catch bugs early.
+
+</h1>
+	<h1>Continuous Delivery (CD): The code is always in a deployable state, enabling frequent, reliable releases. It extends CI by automatically deploying code changes to production </h1>
+	<h1>Automation: Key to DevOps is automating repetitive tasks like code testing, deployment, and infrastructure provisioning to increase efficiency and reduce human error. </h1>
+        <h1> Monitoring and Logging: Continuous monitoring of applications and infrastructure helps detect issues early and ensures systems are running efficiently. Tools like Prometheus, ELK stack, and Grafana are commonly used. </h1>
+        <h1> Collaboration and Communication: DevOps encourages a collaborative culture where development, operations, and other stakeholders work together throughout the software development lifecycle (SDLC).  </h1>
+        <h1>DevOps: A set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle while delivering features, fixes, and updates frequently in close alignment with business objectives  </h1>
+        
        
         
 	<p>

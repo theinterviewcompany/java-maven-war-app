@@ -7,8 +7,8 @@
 	<h1>Hello World!</h1>
 	<h1>DevOps Training - May 2024 Batch</h1>
 	<h1>CI CD using pipeline job</h1>
-	<h1>Hello Class</h1>
-	<h1>deploying the application using pipeline using script from SCM</h1>
+	<h1>final deplpyment of CI CD</h1>
+	<h1>deploying the application using pipeline script from SCM</h1>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>

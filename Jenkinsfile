@@ -25,7 +25,7 @@ pipeline{
             steps{
                 withSonarQubeEnv("SonarQube") {
                     sh "${tool("Sonar_4.6.2")}/bin/sonar-scanner \
-                    -Dsonar.host.url=http://3.25.94.27:9000/ \
+                    -Dsonar.host.url=http://54.66.238.159:9000/ \
                     -Dsonar.login=sqp_97a364fc874b05b597e12ca633ec3aa020fba511 \
                     -Dsonar.java.binaries=target \
                     -Dsonar.projectKey=java-maven-war-app"                    

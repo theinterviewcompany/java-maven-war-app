@@ -6,7 +6,7 @@
 <body>
 	<h1>Hello Class!</h1>
 	<h1>DevOps Training - Hello Nov 2024 Batch</h1>
-	<h2>This is continuous deployment using github webhook</h2>
+	<h2>This is continuous deployment using github webhook </h2>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>

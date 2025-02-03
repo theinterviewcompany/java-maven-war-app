@@ -4,8 +4,9 @@
 
 </head>
 <body>
-	<h1>Hello World!</h1>
-	<h1>DevOps Training - Hello Nov 24 Batch</h1>
+	<h1>Hello Class!</h1>
+	<h1>DevOps Training - Hello Nov 2024 Batch</h1>
+	<h2>This is continuous deployment</h2>
 	<p>
 		It is now
 		<%= new java.util.Date() %></p>

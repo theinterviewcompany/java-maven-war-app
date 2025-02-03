@@ -8,6 +8,8 @@
 	<h1>DevOps Training - Hello Nov 2024 Batch</h1>
 	<h2>This is continuous deployment using github webhook </h2>
 	<p>
+		CI CD using GIT, Jenkins, Maven, SonarQube, Nexus, Ansible and Tomcat. </p>
+	<p>
 		It is now
 		<%= new java.util.Date() %></p>
 	<p>

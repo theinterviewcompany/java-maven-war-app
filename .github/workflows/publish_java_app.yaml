@@ -1,0 +1,55 @@
+name: Deploy Java App
+
+on:
+    workflow_dispatch
+#   push:
+#     branches:
+#       - main
+    
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Maven
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Build with Maven
+      run: mvn clean install
+
+    - name: SonarQube Scan
+      env:
+        SONAR_HOST_URL: http://54.66.238.159:9000/
+        SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
+      run: |
+        sonar-scanner \
+          -Dsonar.projectKey=java-maven-war-app \
+          -Dsonar.sources=. \
+          -Dsonar.host.url=$SONAR_HOST_URL \
+          -Dsonar.login=$SONAR_LOGIN
+
+    - name: Nexus Upload
+      run: mvn -s settings.xml clean deploy
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Ansible
+      run: sudo apt-get update && sudo apt-get install -y ansible
+
+    - name: Run Ansible Playbook
+      run: ansible-playbook -i inventory deployment_playbook.yml -e "build_number=${{ github.run_number }}"
+      env:
+        ANSIBLE_HOST_KEY_CHECKING: 'false'

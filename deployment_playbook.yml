@@ -3,8 +3,8 @@
   hosts: all
   become: true
   vars:
-    nexus_url: http://15.152.45.60:8081/repository
-    repository_type: java-maven-war-app-releases
+    nexus_url: http://3.109.123.188:8081/repository
+    repository_type: java-maven-release
     group_id: com%2Fmycompany%2Fapp
     artifact_id: hello-world-war
     version: 2.5.0
@@ -21,7 +21,7 @@
     ansible.builtin.shell: mv /home/ec2-user/{{group_id}}%2F{{artifact_id}}%2F{{version}}-{{build_number}}%2F{{artifact_id}}-{{version}}-{{ build_number}}.war /home/ec2-user/theinterviewcompany.war
 
   - name: Deploying artifact in webapps
-    ansible.builtin.shell: cp /home/ec2-user/theinterviewcompany.war /bin/apache-tomcat-9.0.98/webapps/theinterviewcompany.war
+    ansible.builtin.shell: cp /home/ec2-user/theinterviewcompany.war /home/ec2-user/apache-tomcat-10.1.42/webapps/theinterviewcompany.war
 
   - name: Remove the artifact
     ansible.builtin.shell: rm -rf /home/ec2-user/theinterviewcompany.war

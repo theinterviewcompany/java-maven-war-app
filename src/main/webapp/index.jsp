@@ -1,3 +1,4 @@
+<!DOCTYPE>
 <html>
 <head>
 <title>Hello World2!</title>

@@ -8,6 +8,7 @@
 	<h1>Hello Class!</h1>
 	<h1>DevOps Training - Hello Aug 2025 Batch</h1>
 	<h2>This application is deployed through CI CD</h2>
+	<h2>Adding this based on feedback from management</h2>
 	<p>
 		CI CD using GIT, Jenkins, Maven, SonarQube, Nexus, Ansible and Tomcat.
 	</p>
